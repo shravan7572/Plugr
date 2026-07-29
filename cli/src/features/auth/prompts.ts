@@ -1,30 +1,20 @@
-import inquirer from "inquirer";
+import inquirer from "inquirer"
 
 export const authpromt = async () => {
-   const answers= await inquirer.prompt([
-
-    {
-        type:"select",
-        name:"language",
-        message:"choose language",
-        choices:["typescript","javascript"]
-    },
-
-       {
-        type:"select",
-        name:"Auth",
-        message:"choose authentication",
-        choices:["JWT","Better-auth"]
-    },
-    {
-        type:"select",
-        name:"package",
-        message:"Choose package manager",
-        choices:["pnpm","npm","yarn","bun"]
-    }
-
+    const answers = await inquirer.prompt([
+        {
+            type: "select",
+            name: "language",
+            message: "Choose language:",
+            choices: ["typescript", "javascript"]
+        },
+        {
+            type: "select",
+            name: "Auth",
+            message: "Choose auth type:",
+            choices: ["JWT", "Better-auth"]
+        }
     ])
 
     return answers
 }
-
