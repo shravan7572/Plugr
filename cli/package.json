@@ -1,18 +1,27 @@
 {
-  "name": "plugr",
-  "version": "1.0.0",
+  "name": "getplugr",
+  "version": "0.0.1",
   "description": "Drop complete features into your existing Express project",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
     "plugr": "./dist/index.js"
   },
+  "files": [
+    "dist",
+    "templates/auth"
+  ],
+  "keywords": [
+    "cli",
+    "express",
+    "scaffolding",
+    "plugr"
+  ],
+  "author": "Shravan Choudhary",
   "scripts": {
     "build": "tsc",
     "dev": "tsc && node ./dist/index.js add auth"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^6.0.0",

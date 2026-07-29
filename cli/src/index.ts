@@ -4,6 +4,8 @@ import { authpromt } from "./features/auth/prompts.js";
 import { logger } from "./utils/logger.js";
 import { emailpromt } from "./features/email/emailprompt.js";
 import { addAuth } from "./features/auth/index.js";
+import { addemail } from "./features/email/index.js";
+import inquirer from "inquirer";
 const program = new Command()
 
 program
@@ -25,7 +27,7 @@ program
 
 
         // else if (feature === "email") {
-        //     const Answers = await emailpromt()
+        //     const Answers = await emailpromt()a
         //     console.log(Answers)
         //     logger.success("Got your choices!")
         //     logger.info(`Emailprovider: ${Answers.Email}`)
@@ -35,11 +37,31 @@ program
         if (feature === "auth") {
             await addAuth()
         }
-
+        else if(feature ==="email"){
+        
+       await addemail()
+        }
         else {
             logger.error(`Unknown feature ${feature}`)
         }
 
+    })
+
+    program
+    .action(async () => {
+        logger.info("Welcome to plugr! 🔌")
+        
+        const { feature } = await inquirer.prompt([
+            {
+                type: "list",
+                name: "feature",
+                message: "What do you want to add?",
+                choices: ["auth", "email"]
+            }
+        ])
+
+        if (feature === "auth") await addAuth()
+        else if (feature === "email") await addemail()
     })
 
 program.parse()

@@ -22,8 +22,7 @@ export const addAuth = async () => {
     logger.success("Auth added to your project!")
 
     console.log("\nIf not already installed, run:")
-    console.log("   pnpm add bcrypt jsonwebtoken zod mongoose")
-    console.log("   pnpm add -D @types/bcrypt @types/jsonwebtoken @types/express")
+    logger.info("\n Run: pnpm/npm/yarn/bun install")
 
     console.log("\nThen add this to your index.ts:")
     console.log(`   import authRoutes from "./routes/auth.routes.js"`)
