@@ -16,6 +16,12 @@ export const authpromt = async () => {
         message:"choose authentication",
         choices:["JWT","Better-auth"]
     },
+    {
+        type:"select",
+        name:"package",
+        message:"Choose package manager",
+        choices:["pnpm","npm","yarn","bun"]
+    }
 
     ])
 

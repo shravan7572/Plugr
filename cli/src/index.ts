@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 import { Command } from "commander";
-import { authpromt } from "./features/auth/prompts";
-import { logger } from "./utils/logger";
-import { emailpromt } from "./features/email/emailprompt";
+import { authpromt } from "./features/auth/prompts.js";
+import { logger } from "./utils/logger.js";
+import { emailpromt } from "./features/email/emailprompt.js";
 const program = new Command()
 
 program
     .name("plugr")
     .description("drop the feature in existing express project")
     .version("1.0.0")
-
+ 
 
 program
     .command("add <feature>")
@@ -21,9 +21,7 @@ program
             logger.info(`Language: ${answers.language}`)
             logger.info(`Auth: ${answers.Auth}`)
         }
-        else{
-            logger.error(`Unknown feature ${feature}`)
-        }
+       
 
          if (feature === "email") {
             const Answers = await emailpromt()
@@ -32,9 +30,11 @@ program
             logger.info(`Emailprovider: ${Answers.Email}`)
             
         }
-        else{
+
+         else{
             logger.error(`Unknown feature ${feature}`)
         }
+      
 
     })
 

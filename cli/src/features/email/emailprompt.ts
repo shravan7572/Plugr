@@ -7,7 +7,13 @@ export const emailpromt= async ()=>{
             name:"Email",
             message:"Choose email provider",
             choices:["Nodemailer","Brevo"]
-        }
+        },
+         {
+        type:"select",
+        name:"package",
+        message:"Choose package manager",
+        choices:["pnpm","npm","yarn","bun"]
+    }
     ])
 
     return Answers
