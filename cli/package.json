@@ -1,8 +1,11 @@
 {
-  "name": "cli",
+  "name": "plugr",
   "version": "1.0.0",
-  "description": "",
+  "description": "Drop complete features into your existing Express project",
   "main": "index.js",
+  "bin": {
+        "plugr": "./dist/index.js"
+    },
   "scripts": {
     "dev": "tsc -b && node ./dist/index.js"
   },
@@ -12,6 +15,16 @@
   "type": "commonjs",
   "dependencies": {
     "@types/typescript": "^2.0.0",
+    "chalk": "^6.0.0",
+    "commander": "^15.0.0",
+    "fs-extra": "^11.4.0",
+    "inquirer": "^14.0.2",
+    "ora": "^9.4.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.10",
+    "@types/node": "^26.1.2",
     "typescript": "^7.0.2"
   }
 }
