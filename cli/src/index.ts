@@ -1,22 +1,41 @@
 #!/usr/bin/env node
-import {Command} from "commander" ;
+import { Command } from "commander";
 import { authpromt } from "./features/auth/prompts";
+import { logger } from "./utils/logger";
+import { emailpromt } from "./features/email/emailprompt";
 const program = new Command()
 
 program
-.name("plugr")
-.description("drop the feature in existing express project")
-.version("1.0.0")
+    .name("plugr")
+    .description("drop the feature in existing express project")
+    .version("1.0.0")
 
 
 program
-.command("add <feature>")
-.description("add feature to project")
-.action(async (feature:string)=>{
-   if(feature==="auth"){
-    const answer=await authpromt()
-    console.log(answer)
-   }
-})
+    .command("add <feature>")
+    .action(async (feature: string) => {
+        if (feature === "auth") {
+            const answers = await authpromt()
+            console.log(answers)
+            logger.success("Got your choices!")
+            logger.info(`Language: ${answers.language}`)
+            logger.info(`Auth: ${answers.Auth}`)
+        }
+        else{
+            logger.error(`Unknown feature ${feature}`)
+        }
+
+         if (feature === "email") {
+            const Answers = await emailpromt()
+            console.log(Answers)
+            logger.success("Got your choices!")
+            logger.info(`Emailprovider: ${Answers.Email}`)
+            
+        }
+        else{
+            logger.error(`Unknown feature ${feature}`)
+        }
+
+    })
 
 program.parse()
