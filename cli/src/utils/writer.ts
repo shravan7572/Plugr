@@ -9,6 +9,6 @@ export const copyTemplateDir = async (templatePath: string, destPath: string) =>
     const fullTemplatePath = path.join(__dirname, "../../templates", templatePath)
     const fullDestPath = path.join(process.cwd(), destPath)
 
-    await fs.ensureDir(fullDestPath)
-    await fs.copy(fullTemplatePath, fullDestPath)
+    await fs.ensureDir(fullDestPath)//this ensures that the src dir is there if not then create it 
+    await fs.copy(fullTemplatePath, fullDestPath)//this copy the whole template 2
 }

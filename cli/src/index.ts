@@ -15,30 +15,30 @@ program
 program
     .command("add <feature>")
     .action(async (feature: string) => {
+        // if (feature === "auth") {
+        //     const answers = await authpromt()
+        //     console.log(answers)
+        //     logger.success("Got your choices!")
+        //     logger.info(`Language: ${answers.language}`)
+        //     logger.info(`Auth: ${answers.Auth}`)
+        // }
+
+
+        // else if (feature === "email") {
+        //     const Answers = await emailpromt()
+        //     console.log(Answers)
+        //     logger.success("Got your choices!")
+        //     logger.info(`Emailprovider: ${Answers.Email}`)
+
+        // }
+
         if (feature === "auth") {
-            const answers = await authpromt()
-            console.log(answers)
-            logger.success("Got your choices!")
-            logger.info(`Language: ${answers.language}`)
-            logger.info(`Auth: ${answers.Auth}`)
-        }
-
-
-        else if (feature === "email") {
-            const Answers = await emailpromt()
-            console.log(Answers)
-            logger.success("Got your choices!")
-            logger.info(`Emailprovider: ${Answers.Email}`)
-
+            await addAuth()
         }
 
         else {
             logger.error(`Unknown feature ${feature}`)
         }
-        if (feature === "auth") {
-            await addAuth()
-        }
-
 
     })
 
