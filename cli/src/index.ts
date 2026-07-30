@@ -53,7 +53,7 @@ program
         
         const { feature } = await inquirer.prompt([
             {
-                type: "list",
+                type: "select",
                 name: "feature",
                 message: "What do you want to add?",
                 choices: ["auth", "email"]

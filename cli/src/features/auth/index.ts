@@ -24,7 +24,16 @@ export const addAuth = async () => {
     console.log("\nIf not already installed, run:")
     logger.info("\n Run: pnpm/npm/yarn/bun install")
 
-    console.log("\nThen add this to your index.ts:")
+   if (Auth === "JWT") {
     console.log(`   import authRoutes from "./routes/auth.routes.js"`)
     console.log(`   app.use("/api/auth", authRoutes)`)
+} else {
+    console.log(`\n   1. Add to your index.ts BEFORE express.json():`)
+    console.log(`      import authRoutes from "./routes/auth.routes.js"`)
+    console.log(`      app.use(authRoutes)`)
+    console.log(`\n   2. Install dependencies:`)
+    console.log(`      npm install better-auth zod mongodb`)
+    console.log(`\n   3. Fill in your .env file`)
+    console.log(`\n   ⚡ Better Auth handles /api/auth/* automatically!`)
+}
 }
