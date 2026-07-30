@@ -12,13 +12,18 @@ export const addAuth = async () => {
     const templatePath = `auth/${lang}/${authType}/mongodb`
 
     logger.info("Copying template files...")
-
+    if (Auth === "JWT") {
     await copyTemplateDir(`${templatePath}/models`, "src/models")
     await copyTemplateDir(`${templatePath}/middleware`, "src/middleware")
     await copyTemplateDir(`${templatePath}/controllers`, "src/controllers")
     await copyTemplateDir(`${templatePath}/routes`, "src/routes")
     await copyTemplateDir(`${templatePath}/config`, "src/config")
-
+    }else{
+          await copyTemplateDir(`${templatePath}/middleware`, "src/middleware")
+    await copyTemplateDir(`${templatePath}/controllers`, "src/controllers")
+    await copyTemplateDir(`${templatePath}/routes`, "src/routes")
+    await copyTemplateDir(`${templatePath}/config`, "src/config")
+    }
     logger.success("Auth added to your project!")
 
     console.log("\nIf not already installed, run:")

@@ -1,11 +1,11 @@
 {
   "name": "getplugr",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Drop complete features into your existing Express project",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
-    "plugr": "./dist/index.js"
+    "plugr": "dist/index.js"
   },
   "files": [
     "dist",
