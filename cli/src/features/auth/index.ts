@@ -19,8 +19,7 @@ export const addAuth = async () => {
     await copyTemplateDir(`${templatePath}/routes`, "src/routes")
     await copyTemplateDir(`${templatePath}/config`, "src/config")
     }else{
-          await copyTemplateDir(`${templatePath}/middleware`, "src/middleware")
-    await copyTemplateDir(`${templatePath}/controllers`, "src/controllers")
+    await copyTemplateDir(`${templatePath}/middleware`, "src/middleware")
     await copyTemplateDir(`${templatePath}/routes`, "src/routes")
     await copyTemplateDir(`${templatePath}/config`, "src/config")
     }
