@@ -30,10 +30,13 @@ export const addemail = async () => {
     if (Email === "Nodemailer") {
         deps = ["nodemailer", "dotenv"]
         if (language === "typescript") {
-            devDeps = ["@types/nodemailer"]
+            devDeps = ["@types/nodemailer", "@types/node"]
         }
     } else {
         deps = ["@getbrevo/brevo", "dotenv"]
+        if (language === "typescript") {
+            devDeps = ["@types/node"]
+        }
     }
 
     const { pm: detectedPm, detected } = await detectPackageManager()

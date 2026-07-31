@@ -34,12 +34,15 @@ export const addAuth = async () => {
     let devDeps: string[] = []
 
     if (Auth === "JWT") {
-        deps = ["jsonwebtoken", "bcryptjs", "mongoose", "dotenv", "cors","express"]
+        deps = ["jsonwebtoken", "bcrypt", "mongoose", "dotenv", "cors","express","zod"]
         if (language === "typescript") {
-            devDeps = ["@types/jsonwebtoken", "@types/bcryptjs"]
+            devDeps = ["@types/jsonwebtoken", "@types/bcrypt", "@types/node", "@types/express", "@types/cors"]
         }
     } else {
         deps = ["better-auth", "mongodb", "dotenv", "cors"]
+        if (language === "typescript") {
+            devDeps = ["@types/node", "@types/express", "@types/cors"]
+        }
     }
 
     const { pm: detectedPm, detected } = await detectPackageManager()

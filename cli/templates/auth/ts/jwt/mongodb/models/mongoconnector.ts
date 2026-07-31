@@ -17,3 +17,8 @@ export const connectdb = async () => {
 }
 
 //just call connectdb() in index.js
+
+
+// DO THIS IN INDEX.TS
+//import dotenv from"dotenv"
+//dotenv.config()
