@@ -1,65 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  color-scheme: dark;
-}
-
 body {
-  background-color: #09090b;
-  color: #fafafa;
+  background-color: #ffffff;
+  color: #171717;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   margin: 0;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Grid background styles */
-.bg-grid {
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-position: center;
+/* Soft, premium sky-blue radial gradient behind hero ONLY */
+.hero-backdrop {
+  background: radial-gradient(circle at center, #f0f7ff 0%, #ffffff 100%);
 }
 
-/* Custom scrollbar */
+/* Custom JetBrains Mono font classes */
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom scrollbars matching the clean system */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #dcdee0;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #cbd5e1;
 }
 
-/* Custom animations and utilities */
-@keyframes pulse-slow {
-  0%, 100% {
-    opacity: 0.15;
-  }
-  50% {
-    opacity: 0.25;
-  }
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
+/* Code viewer colors (VS Code Light style code highlights for dark container) */
+.token-comment { color: #888888; }
+.token-keyword { color: #ff7b72; font-weight: 600; }
+.token-string { color: #a5d6ff; }
+.token-type { color: #79c0ff; }
+.token-number { color: #d2a8ff; }
