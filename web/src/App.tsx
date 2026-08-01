@@ -568,9 +568,9 @@ function App() {
       </section>
 
       {/* 7. FOOTER */}
-      <footer className="bg-white py-[96px]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col gap-16">
-          
+      <footer className="bg-white pt-[96px] pb-8">
+        {/* Columns container */}
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 mb-8">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-10 text-left">
             {/* Product */}
             <div className="space-y-4">
@@ -603,18 +603,22 @@ function App() {
               <h4 className="text-xs font-semibold uppercase tracking-wider text-[#171717]">Connect</h4>
               <ul className="space-y-2 text-xs">
                 <li><span className="text-[#60646c]">Twitter</span></li>
-                <li><span className="text-[#60646c]">Discord</span></li>
-                <li><span className="text-[#60646c]">Support</span></li>
+                <li><span className="text-[#60646c]">LinkedIn</span></li>
+                <li><span className="text-[#60646c]">Contact</span></li>
               </ul>
             </div>
           </div>
+        </div>
 
-          {/* Bottom attribution */}
-          <div className="border-t border-[#dcdee0] pt-8 flex items-center justify-between text-[11px] text-[#999999] uppercase font-semibold tracking-wider select-none">
+        {/* Edge-to-Edge Divider Line */}
+        <div className="w-full border-t border-[#dcdee0]"></div>
+
+        {/* Attribution container */}
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-6">
+          <div className="flex items-center justify-between text-[9px] text-[#999999] uppercase font-semibold tracking-wider select-none">
             <span>&copy; 2026 Plugr CLI.</span>
             <span>Built by Shravan Choudhary</span>
           </div>
-
         </div>
       </footer>
 
