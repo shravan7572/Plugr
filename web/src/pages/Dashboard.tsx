@@ -646,8 +646,8 @@ function Dashboard() {
               <h4 className="text-xs font-semibold uppercase tracking-wider text-[#171717]">Connect</h4>
               <ul className="space-y-2 text-xs">
                 <li><a  href='https://x.com/shravann3107?s=11' target='_blank' className="text-[#60646c] hover:text-black">Twitter</a></li>
-                <li><a  href='www.linkedin.com/in/shravan7572' target='_blank'  className="text-[#60646c] hover:text-black">LinkedIn</a></li>
-                <li><a  href=''  className="text-[#60646c] hover:text-black">Contact</a></li>
+                <li><a  href='https://www.linkedin.com/in/shravan7572/' target='_blank'  className="text-[#60646c] hover:text-black">LinkedIn</a></li>
+                <li><a  href='https://devvboard.vercel.app/shravan  '  className="text-[#60646c] hover:text-black">Contact</a></li>
               </ul>
             </div>
           </div>
