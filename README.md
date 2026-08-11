@@ -109,7 +109,7 @@ plugr/
 ## Local Development
 
 ```bash
-git clone https://github.com/shravan/plugr
+git clone https://github.com/shrava7572/plugr
 cd plugr/cli
 npm install
 npm run build
@@ -151,6 +151,6 @@ MIT — use it however you want.
 
 <div align="center">
 
-Made by [Shravan Choudhary](https://github.com/shravan) — [npm](https://www.npmjs.com/package/getplugr) · [LinkedIn](https://linkedin.com/in/shravan)
+Made by [Shravan Choudhary](https://github.com/shravan7572) — [npm](https://www.npmjs.com/package/getplugr) · [LinkedIn](https://linkedin.com/in/shravan)
 
 </div>
